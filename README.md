@@ -1,142 +1,151 @@
-\# IoT RFID \& Keypad Access Control System
+IoT RFID & Keypad Access Control System
 
+An embedded IoT access control hardware prototype implementing RFID-based authentication with keypad passcode fallback, real-time LCD feedback, and an electromechanical locking mechanism.
 
+This system was designed, built, and publicly demonstrated as a working prototype at the LNBTI Talent Show & IoT Exhibition (2023).
 
-An embedded IoT access control prototype implementing RFID-based authentication with keypad passcode fallback, LCD status display, and an electromechanical locking mechanism.
+📌 Project Overview
 
+This project simulates a secure physical access control system where users authenticate using an RFID card.
+If RFID authentication fails or is unavailable, a keypad-based passcode provides a controlled fallback.
 
+System state and access results are displayed via an LCD, while a servo-driven locking mechanism physically controls access.
 
-This system was \*\*designed, built, and demonstrated as a working hardware prototype\*\* at the LNBTI Talent Show \& IoT Exhibition (2023).
+The focus of this repository is on embedded system design, hardware–software integration, and documented implementation, rather than production deployment.
 
+🧠 Key Capabilities
 
+RFID UID-based authentication
 
-\## Overview
+Keypad passcode fallback mechanism
 
-The project simulates a secure entry system where users authenticate using an RFID card. If RFID authentication fails or is unavailable, a keypad-based passcode provides a controlled override. System state and access results are displayed via an LCD, while a servo-based locking mechanism physically controls access.
+LCD status feedback (Prompt / Granted / Denied)
 
+Servo-controlled physical locking
 
+Embedded control logic with state handling
 
-\## Key Capabilities
+Fully demonstrated physical prototype
 
-\- RFID UID-based authentication
+🔁 System Workflow
 
-\- Keypad passcode fallback
+System boots into IDLE state
 
-\- LCD feedback (Prompt / Granted / Denied)
+User scans RFID card or enters keypad passcode
 
-\- Servo/lock actuation
+Credentials are validated in firmware
 
-\- Embedded control logic and state handling
+LCD displays authentication result
 
-\- Physical system demonstration and validation
+Servo unlocks or remains locked
 
+System resets after timeout
 
+🏗️ System Architecture
 
-\## System Architecture
+Architecture Summary
 
-!\[Architecture](docs/diagrams/system-architecture.png)
+Input Layer: RFID reader, keypad
 
+Control Layer: Microcontroller firmware (ESP32 / Arduino-class)
 
+Output Layer: LCD display, servo motor
 
-\## Hardware Components
+Logic Layer: Authentication + state machine
 
-\- Microcontroller (ESP32 / Arduino-class)
+🔧 Hardware Components
 
-\- MFRC522 RFID Reader
+Microcontroller (ESP32 / Arduino-class)
 
-\- 4x4 Keypad
+MFRC522 RFID Reader
 
-\- 16x2 LCD Display
+4×4 Matrix Keypad
 
-\- Servo motor / locking latch
+16×2 LCD Display
 
-\- Power supply and discrete components
+Servo motor / locking latch
 
+Power supply and discrete components
 
+📸 Prototype Photos
+System Overview
 
-\## Prototype Photos
+Keypad & LCD Interface
 
-\*\*System Overview\*\*  
+RFID Module
 
-!\[Overview](docs/photos/01-system-overview.jpg)
+Locking Mechanism
 
+🎤 Public Demonstration
 
+This prototype was demonstrated live at:
 
-\*\*Keypad \& LCD Interface\*\*  
+LNBTI Talent Show & IoT Exhibition — 2023
 
-!\[Keypad](docs/photos/02-keypad-lcd.jpg)
+Exhibition Demo
 
+Team Presentation
 
+The system was evaluated by academic staff and external visitors as a working physical IoT prototype.
 
-\*\*RFID Module\*\*  
+💾 Firmware Notes
 
-!\[RFID](docs/photos/03-rfid-module.jpg)
+The embedded firmware implemented:
 
+RFID UID validation
 
+Keypad input parsing
 
-\*\*Locking Mechanism\*\*  
+LCD state updates
 
-!\[Lock](docs/photos/04-lock-mechanism.jpg)
+Timed lock/unlock control
 
+Failure handling and retry logic
 
+Note
+The original exhibition firmware is not preserved in this repository.
+This project emphasizes system behavior, hardware integration, and documented design.
+A clean firmware reimplementation may be added in the future.
 
-\## Public Demonstration
+📂 Repository Structure
+iot-rfid-keypad-access-control/
+│
+├── docs/
+│   ├── diagrams/
+│   │   └── system-architecture.png
+│   ├── photos/
+│   └── exhibition/
+│
+├── README.md
+└── ORIGINAL_PROJECT.md
 
-This prototype was demonstrated at:
+🧪 Project Status
 
+✅ Hardware prototype completed
 
+✅ Successfully demonstrated
 
-\*\*LNBTI Talent Show \& IoT Exhibition – 2023\*\*
+⏳ Firmware reimplementation planned
 
+⏳ Cloud / logging extensions possible
 
+🛠 Skills Demonstrated
 
-!\[Exhibition](docs/exhibition/05-exhibition-demo.jpg)
+Embedded systems design
 
-!\[Team](docs/exhibition/06-team-presentation.jpg)
+Hardware–software integration
 
+RFID-based authentication logic
 
+Access control workflows
 
-\## Firmware Notes
+Microcontroller interfacing
 
-The firmware for this project handled:
+Technical documentation
 
-\- RFID UID validation
+Public technical presentation
 
-\- Keypad input parsing
+📜 Disclaimer
 
-\- LCD state updates
-
-\- Timed lock/unlock control
-
-\- Failure handling and retries
-
-
-
-> Source code is not included in this repository.  
-
-> This repository focuses on \*\*system design, hardware integration, and documented implementation\*\*.
-
-
-
-\## Skills Demonstrated
-
-\- Embedded systems design
-
-\- Hardware-software integration
-
-\- RFID-based authentication logic
-
-\- Access control workflows
-
-\- Technical documentation
-
-\- Public technical presentation
-
-
-
-\## Disclaimer
-
-This project is a \*\*prototype and academic demonstration\*\*, not a production security system.
-
-
-
+This project is an academic hardware prototype developed for demonstration and learning purposes.
+It is not intended for production or commercial security deployment.
