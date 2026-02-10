@@ -1,26 +1,15 @@
-\## Firmware Summary
+# Firmware
 
+This directory contains the embedded firmware implementations for the **IoT RFID & Keypad Access Control System**.
 
+The firmware demonstrates embedded system design, hardware–software integration, and access control logic for a physical locking mechanism using RFID authentication and keypad-based fallback.
 
-The firmware controlled authentication flow, input handling, display updates, and lock actuation.
+Two firmware variants are provided to reflect different hardware capabilities.
 
+---
 
+## Firmware Variants
 
-Core logic included:
+### ESP32 Firmware (Wi-Fi Enabled)
 
-\- RFID UID comparison against allowed identifiers
-
-\- Keypad passcode verification
-
-\- LCD messaging per system state
-
-\- Timed servo control for access grant
-
-\- Reset and retry handling
-
-
-
-This repository documents the implemented system rather than distributing firmware binaries.
-
-
-
+**Path**
